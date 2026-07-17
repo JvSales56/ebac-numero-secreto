@@ -1,37 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da Adivinhação</title>
     <script src="./scripts/script.js" defer></script>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <main>
-        <h1> Jogo da Adivinhação</h1>
-        <section>
-            <h2> Como jogar:</h2>
-            <ol>
-                <li>Nosso computador irá gerar um número aleatório entre 1 e 100.</li>
-                <li>O jogador deve tentar adivinhar o número escolhido.</li>
-                <li>Haverá 10 tentativas para adivinhar o número.</li>
-                <li>Após cada tentativa, o jogador receberá uma dica se o número é maior ou menor do que o palpite.</li>
-                <li>Se o jogador acertar o número, ele vence o jogo.</li>
-                <li>Se o jogador não acertar em 10 tentativas, ele perde o jogo.</li>
-            </ol>
-        </section>
-        <section>
-            <button onclick="gerarNumero()" type="button" id="comecar-jogo">Começar Jogo</button>
-            <form id="jogo">
-                <label for="palpite">Digite seu palpite:</label>
-                <input type="number" id="palpite" name="palpite" min="1" max="100" required>
-                <button type="button" onclick="testarPalpite()">Testar Palpite</button>
-                <button type="button" onclick="chutarPalpite()">Chutar</button>
-            </form>
-            <p id="dicaResultado"></p>
-            <p id="tentativas"></p>
-        </section>
+      <h1>Jogo da Adivinhação</h1>
+      <section class="regras">
+        <h2>Como jogar:</h2>
+        <ol>
+          <li>Nosso computador irá gerar um número aleatório entre 1 e 100.</li>
+          <li>O jogador deve tentar adivinhar o número escolhido.</li>
+          <li>Haverá 10 tentativas para adivinhar o número.</li>
+          <li>Após cada tentativa, o jogador receberá uma dica se o número é maior ou menor do que o palpite.</li>
+          <li>Se o jogador acertar o número, ele vence o jogo.</li>
+          <li>Se o jogador não acertar em 10 tentativas, ele perde o jogo.</li>
+        </ol>
+      </section>
+      <section class="jogo">
+        <button onclick="gerarNumero()" type="button" id="comecar-jogo">
+          Começar Jogo
+        </button>
+        <form id="jogoform">
+          <label for="palpite">Digite seu palpite:</label>
+          <input
+            type="number"
+            id="palpite"
+            name="palpite"
+            min="1"
+            max="100"
+            required
+          />
+          <button type="button" onclick="testarPalpite()">
+            Testar Palpite
+          </button>
+          <button type="button" onclick="chutarPalpite()">Chutar</button>
+        </form>
+        <div class="resultados">
+          <p id="dicaResultado"></p>
+          <p id="tentativas"></p>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
